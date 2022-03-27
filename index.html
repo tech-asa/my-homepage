@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <script src="https://kit.fontawesome.com/b7b5d6eab4.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="response.css">
+	
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada" rel="stylesheet">    
+    
+    <title>自作ホームページ</title>
+</head>
+
+<body>
+    <header id="header">
+        <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+        <label for="openSidebarMenu" class="sidebarIconToggle">
+            <div class="spinner diagonal part-1"></div>
+            <div class="spinner horizontal"></div>
+            <div class="spinner diagonal part-2"></div>
+        </label>
+        <div id="sidebarMenu">
+            <ul class="sidebarMenuInner">
+                <li class="menu-list"><a href="#js-top">TOP</a></li>
+                <li class="menu-list"><a href="#js-profile">PROFILE</a></li>
+                <li class="menu-list"><a href="#js-life">LIFE</a></li>
+                <li class="menu-list"><a href="#js-portfolio">PORTFOLIO</a></li>
+                <li class="menu-list"><a href="#js-contact">CONTACT</a></li>
+            </ul>
+        </div>
+
+        <div class="title" id="title">
+            <h1 class="title-font">[A]cite</h1>
+        </div>
+        <nav class="menu">
+            <ul class="menu-lists" id="sideMenu">
+                <li class="menu-list"><a href="#js-top">TOP</a></li>
+                <li class="menu-list"><a href="#js-profile">PROFILE</a></li>
+                <li class="menu-list"><a href="#js-life">LIFE</a></li>
+                <li class="menu-list"><a href="#js-portfolio">PORTFOLIO</a></li>
+                <li class="menu-list"><a href="#js-contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="slide" id="js-top">
+            <img src="img/main-image1.jpg">
+            <img src="img/main-image2.jpg">
+            <img src="img/main-image3.jpg">
+            <img src="img/main-image4.jpg">
+            <img src="img/main-image5.jpg">
+            <h1 class="main-message container">Try again!</h1>
+        </div>
+
+        <div class="container">
+            <div class="profile" id="js-profile">
+                <h2>PROFILE</h2>
+                <div class="profile-contents fade-in">
+                    <div class="image-icon">
+                        <img src="img/image-icon.png" alt="">
+                    </div>
+                    <div class="status">
+                        <p>年齢 : 24歳</p>
+                        <p>出身 : 東京都東村山市</p>
+                        <p>趣味 : ゲーム、テニス</p>
+                    </div>
+                </div>
+                <p class="profile-text fade-in">東京にあるT大学経営学部卒業後、不動産会社に新卒で入社<br>営業現場を肌で感じ、自己成長の未来に疑問を抱き<br>プログラミングの世界へ、脚を踏み入れた。</p>
+            </div>
+
+            <div class="life" id="js-life">
+                <h2>LIFE</h2>
+                <div class="life-image fade-in">
+                    <img src="img/life-image.jpg" alt="">
+                </div>
+                <p class="fade-in">プログラミングスクール「TECH I.S.」のカリキュラム内で<br>
+                    <span>JavaScript / PHP / MySQL</span> に関しての基礎知識を学習<br>
+                    その他<span>Laravel</span>を始めとしたフレームワークの知識を学習中</p>
+            </div>
+
+            <div class="portfolio" id="js-portfolio">
+                <h2>PORTFOLIO</h2>
+                <h3>カリキュラム内制作物</h3>
+                <div class="displays fade-in">
+                    <div class="display">
+                        <h4>Twitterクローン</h4>
+                        <div class="display-image">
+                            <a href=""><img src="img/twitter-image.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="display">
+                        <h4>チーム制作</h4>
+                        <div class="display-image">
+                            <a href=""><img src="img/team-meeting.jpg" alt=""></a>
+                        </div>
+                    </div>              
+                </div>
+                <h3>自主制作物</h3>
+                <div class="displays fade-in">
+                    <div class="display">
+                        <h4>Twitterクローン</h4>
+                        <div class="display-image">
+                            <a href=""><img src="img/twitter-image.jpg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="display">
+                        <h4>チーム制作</h4>
+                        <div class="display-image">
+                            <a href=""><img src="img/team-meeting.jpg" alt=""></a>
+                        </div>
+                    </div>              
+                </div>
+            </div>
+
+            <div class="contact" id="js-contact">
+                <h2>CONTACT</h2>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>  
+
+    <!-- javascriptの読み込み -->
+    <script type="text/javascript" src="homepage.js"></script>
+</body>
+
+</html>

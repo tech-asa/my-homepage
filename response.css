@@ -1,0 +1,90 @@
+@media(max-width: 700px) {
+    header {
+        border-bottom: 1px solid gray;
+    }
+
+    .sidebarIconToggle {
+        display: block;
+    }
+
+    header h1 {
+        padding-left: 50%;
+    }
+
+    header .menu-lists {
+        clear: left;
+        display: none;
+        text-align: center;
+        padding: 0;
+    }
+
+    header .menu-list {
+        border-top: 1px solid white;
+    }
+
+    header .title {
+        float: left;
+    }
+
+    /* メニューバーの追加 */
+    header #sideIcon{
+        float: right;
+        display: block;
+        font-size: 1.5rem;
+        margin: 20px 30px 15px 15px;
+        padding: 5px;
+        border: 3px solid black;
+        border-radius: 3px;
+
+    }
+
+    header #sideIcon:hover {
+        cursor: pointer;
+        transform:scale(1.2,1.2);
+        transition-duration: 400ms;
+        opacity: 0.6;
+    }        
+
+    /* メインスライド部分 */
+    .slide {
+        height:600px;
+    }
+
+    /* メイン全体 */
+    .container h2 {
+        width: 50%;
+        font-size: 20px;
+    }
+
+
+    .profile .profile-contents {
+        display: block;
+        justify-content: none;
+        align-items: none;
+    }
+
+    .profile .profile-contents .image-icon {
+        margin: 0 auto;
+    }
+
+    .profile .profile-contents .status {
+        padding-top: 10px;
+        padding-left: 0;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .portfolio h3 {
+        width: 60%;
+        font-size: 14px;
+    }
+
+    .portfolio .displays .display-image {
+        height: 140px;
+        min-width: 100px;
+    }
+
+    .portfolio .displays .display h4 {
+        font-size: 12px;
+    }
+}

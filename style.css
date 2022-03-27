@@ -1,0 +1,360 @@
+/* 全体 */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* 全体のリンク */
+a {
+    text-decoration: none;
+}
+
+/* ヘッダー部分 */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: white;
+}
+
+header h1 {
+    margin: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5%;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 3.5rem;
+    letter-spacing: 3px;
+}
+
+/* ヘッダーメニュー */
+header .menu {
+    background-color: black;
+}
+
+header .menu-lists {
+    display: flex;
+    margin: 0;
+    border-bottom: 0.5px solid white;
+}
+
+header .menu-lists li {
+    list-style: none;
+    padding: 13px 30px 13px 25px; 
+    font-size: 14px;
+}
+
+header .menu-lists li a {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+#changeIcon {
+    display: none;
+}
+
+/* リストアニメーション適応 */
+ul li a::after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    transition: transform .3s;
+}
+
+ul li a:hover::after {
+    transform: scale(1, 1);
+}
+
+/* サイドバー管理 */
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
+.mainInner{
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+.mainInner div{
+    display:table-cell;
+    vertical-align: middle;
+    font-size: 3em;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+}
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    width: 250px;
+    margin-top: 72px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    background-color: black;
+}
+.sidebarMenuInner{
+    margin:0;
+    padding:0;
+    border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li{
+    list-style: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.sidebarMenuInner li a{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+input[type="checkbox"]:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input[type=checkbox] {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    display: none;
+}
+.sidebarIconToggle {
+    display: none;
+    filter: invert();
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    top: 29px;
+    left: 20px;
+    height: 22px;
+    width: 22px;
+}
+.spinner {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+}
+.horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+.diagonal.part-1 {
+    position: relative;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    float: left;
+}
+.diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    opacity: 0;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+    transition: all 0.3s;
+    box-sizing: border-box;
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+/* メイン画像 */
+.slide {
+	position:relative;
+	height:600px;
+    width: 100%;
+    z-index: -1;
+}
+.slide img {
+	position:absolute;
+	opacity:0;
+	transition:all 1s ease-in-out;
+    height: 100%;
+    width: 100%;
+	object-fit: cover;
+}
+.slide h1 {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    z-index: 1;
+    color: white;
+    font-family: 'Montserrat Subrayada', sans-serif;
+    font-size: 50px;
+}
+
+/* メイン全体 */
+.container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 850px;
+}
+
+.container h2 {
+    font-size: clamp(18px, 3vw, 28px);
+    width: 25vw;
+    margin: 0 auto 50px;
+    padding-top: 50px;
+    text-align: center;
+    letter-spacing: 3px;
+    border-bottom: 1px solid gray;
+}
+
+.fade-in {
+    opacity: 0;
+    transition-duration: 800ms;
+    transition-property: opacity, transform;
+    transform: translate(0, 50px);
+}
+
+.scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+
+/* プロフィール部分 */
+.profile .profile-contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.profile .profile-contents .image-icon {
+    width: 130px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.image-icon img {
+    width: 100%;
+}
+
+.profile .profile-contents .status {
+    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+    padding-left: 60px;
+    letter-spacing: 1px;
+    font-size: clamp(14px, 1.6vw, 18px);
+}
+
+.profile .profile-text {
+    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+    letter-spacing: 1px;
+    padding-top: 10px;
+    text-align: center;
+    line-height: 30px;
+    font-size: clamp(10px, 1.5vw, 16px);
+}
+
+/* life部分 */
+.life .life-image {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.life .life-image img {
+    width: 100%;
+}
+
+.life p {
+    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+    letter-spacing: 1px;
+    padding-top: 10px;
+    text-align: center;
+    line-height: 30px;
+    font-size: clamp(10px, 1.5vw, 16px);
+}
+
+.life p span {
+    font-weight: bold;
+}
+
+/* ポートフォリオ部分 */
+.portfolio h3 {
+    width: 40%;
+    text-align: center;
+    margin: 0 auto;
+    font-size: clamp(14px, 1.5vw, 20px);
+    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+    letter-spacing: 1px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid gray;
+}
+
+.portfolio .displays {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.portfolio .displays .display {
+    width: 40%;
+    margin-bottom: 50px;
+}
+
+.portfolio .displays .display h4 {
+    font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
+    letter-spacing: 1px;
+    font-size: clamp(12px, 1.5vw, 18px);
+}
+
+.portfolio .displays .display-image {
+    height: 200px;
+    min-width: 200px;
+    overflow: hidden;
+}
+
+.portfolio .displays .display-image:hover {
+    transform:scale(1.1,1.1);
+    transition-duration: 400ms;
+}
+
+.portfolio .displays .display img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3%;
+}
+
+.portfolio .displays .display img:hover {
+    opacity: 0.7;
+}
