@@ -58,10 +58,6 @@ header .menu-lists li a {
     display: inline-block;
 }
 
-#changeIcon {
-    display: none;
-}
-
 /* リストアニメーション適応 */
 ul li a::after {
     position: absolute;
@@ -88,13 +84,16 @@ ul li a:hover::after {
     width: 100%;
     text-align: center;
 }
+
 .mainInner div{
-    display:table-cell;
+    display: table-cell;
     vertical-align: middle;
     font-size: 3em;
     font-weight: bold;
     letter-spacing: 1.25px;
 }
+
+/* サイドバー部分のステータス */
 #sidebarMenu {
     height: 100%;
     position: fixed;
@@ -105,11 +104,13 @@ ul li a:hover::after {
     transition: transform 250ms ease-in-out;
     background-color: black;
 }
+
 .sidebarMenuInner{
     margin:0;
     padding:0;
     border-top: 1px solid rgba(255, 255, 255, 0.10);
 }
+
 .sidebarMenuInner li{
     list-style: none;
     color: #fff;
@@ -119,6 +120,7 @@ ul li a:hover::after {
     cursor: pointer;
     border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
+
 .sidebarMenuInner li a{
     color: #fff;
     text-transform: uppercase;
@@ -126,6 +128,7 @@ ul li a:hover::after {
     cursor: pointer;
     text-decoration: none;
 }
+
 input[type="checkbox"]:checked ~ #sidebarMenu {
     transform: translateX(0);
 }
@@ -135,6 +138,8 @@ input[type=checkbox] {
     box-sizing: border-box;
     display: none;
 }
+
+/* ボタン部分のステータス */
 .sidebarIconToggle {
     display: none;
     filter: invert();
@@ -150,6 +155,7 @@ input[type=checkbox] {
     height: 22px;
     width: 22px;
 }
+
 .spinner {
     transition: all 0.3s;
     box-sizing: border-box;
@@ -158,6 +164,7 @@ input[type=checkbox] {
     width: 100%;
     background-color: #fff;
 }
+
 .horizontal {
     transition: all 0.3s;
     box-sizing: border-box;
@@ -165,12 +172,14 @@ input[type=checkbox] {
     float: left;
     margin-top: 3px;
 }
+
 .diagonal.part-1 {
     position: relative;
     transition: all 0.3s;
     box-sizing: border-box;
     float: left;
 }
+
 .diagonal.part-2 {
     transition: all 0.3s;
     box-sizing: border-box;
@@ -178,17 +187,20 @@ input[type=checkbox] {
     float: left;
     margin-top: 3px;
 }
+
 input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
     transition: all 0.3s;
     box-sizing: border-box;
     opacity: 0;
 }
+
 input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
     transition: all 0.3s;
     box-sizing: border-box;
     transform: rotate(135deg);
     margin-top: 8px;
 }
+
 input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     transition: all 0.3s;
     box-sizing: border-box;
@@ -238,6 +250,7 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     border-bottom: 1px solid gray;
 }
 
+/* フェードイン部分 */
 .fade-in {
     opacity: 0;
     transition-duration: 800ms;
