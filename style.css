@@ -344,6 +344,14 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     margin-bottom: 50px;
 }
 
+.portfolio .displays .display p {
+    display: block;
+    font-size: clamp(10px, 1.5vw, 18px);
+    word-wrap: break-word;
+    padding: 0;
+    margin: 5px 0;
+}
+
 .portfolio .displays .display h4 {
     font-family:"Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体";
     letter-spacing: 1px;
@@ -370,4 +378,42 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 
 .portfolio .displays .display img:hover {
     opacity: 0.7;
+}
+
+.contact table {
+    border: 2px dotted black;
+    width: 80%;
+    margin: 0 auto 50px;
+    padding: 20px;
+}
+
+.contact h3 {
+    font-size: clamp(10px, 1.5vw, 16px);
+    text-align: center;
+}
+
+.contact .link-title {
+    font-size: clamp(10px, 1vw, 16px);
+    font-weight: bold;
+    padding-left: 20px;
+    border-bottom: 2px dotted black;
+}
+
+.contact .link {
+    cursor: pointer;
+    font-size: clamp(10px, 1vw, 16px);
+    border-bottom: 2px dotted black;
+}
+
+.contact .link:hover {
+    background-color: #f0f0f0;
+}
+
+.contact img {
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid gray;
 }
